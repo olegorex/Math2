@@ -1,0 +1,24 @@
+<html>
+  <head>
+<p>Задача 6</p>
+    <script type="text/javascript">
+    function f(n) {
+        return n ? n * f(n - 1) : 1;
+    }
+    function c(n, k) {
+      return f(n)/(f(k)*f(n-k));
+    }
+    function c_p(m, n) {
+      return f(n+m-1)/(f(m)*f(n-1));
+    }
+    function a(n, k) {
+      return f(n)/f(n-k);
+    }
+
+    document.write("Ответ: а) р = ",  0 / (c(6, 1) * c(6, 1)), "<br>",
+    "                            б) P = ", 8 / (c(6, 1) * c(6, 1)), "<br>",
+    "                            в) P = ", 1 - (1 / 4), "<br>");
+  </script>
+                                  
+</html>
+            

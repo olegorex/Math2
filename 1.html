@@ -1,0 +1,22 @@
+<html>
+  <head>
+ <p>Задача 4</p>
+    <script type="text/javascript">
+    function f(n) {
+        return n ? n * f(n - 1) : 1;
+    }
+    function c(n, k) {
+      return f(n)/(f(k)*f(n-k));
+    }
+    function c_p(m, n) {
+      return f(n+m-1)/(f(m)*f(n-1));
+    }
+    function a(n, k) {
+      return f(n)/f(n-k);
+    }
+
+  document.write("Ответ: ", 1 / (c(4, 1) * 2));
+  </script>
+                                  
+</html>
+            
